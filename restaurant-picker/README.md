@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🍽️ Restaurant Picker
 
-## Getting Started
+A lightweight, web-based app that allows users to add restaurants to a shared list and randomly select one to decide what to eat. Built with Next.js, Supabase, and Tailwind CSS, this project is ideal for teams, friends, or families looking to make mealtime decisions fun and interactive.
 
-First, run the development server:
+🚀 Features
 
-```bash
+Add restaurants to a shared global list.
+
+Randomly pick a restaurant with a single click.
+
+View the complete list of all added restaurants.
+
+Responsive, mobile-friendly design with Tailwind CSS.
+
+Simple API endpoints powered by Supabase.
+
+🛠️ Tech Stack
+Layer	Technology
+Frontend	Next.js (React) + Tailwind CSS
+Backend / Database	Supabase (PostgreSQL)
+Deployment	Vercel
+Language	TypeScript
+📦 Installation
+
+Clone the repository
+
+git clone https://github.com/your-username/restaurant-picker.git
+cd restaurant-picker
+
+
+Install dependencies
+
+npm install
+
+
+Set up environment variables
+
+Create a .env.local file in the project root:
+
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url_here
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key_here
+
+
+Run the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open http://localhost:3000
+ to see the app in action.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🗂️ Project Structure
+restaurant-picker/
+│
+├─ app/                   # Next.js app router pages
+│   ├─ page.tsx           # Main frontend page
+│   └─ api/               # API endpoints
+│       └─ restaurants/   # Restaurant CRUD & random selection
+│
+├─ lib/
+│   └─ supabase.ts        # Supabase client setup
+│
+├─ public/                # Static assets
+├─ styles/                # Tailwind and global CSS
+├─ .env.local             # Environment variables
+└─ package.json
 
-## Learn More
+🔧 API Endpoints
+Endpoint	Method	Description
+/api/restaurants/add	POST	Add a new restaurant
+/api/restaurants/random	GET	Get a random restaurant
+/api/restaurants/all	GET	Fetch all restaurants
+📈 Future Improvements
 
-To learn more about Next.js, take a look at the following resources:
+User authentication (optional) for personalized lists.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Categorize restaurants (cuisine, price, distance, etc.).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Upvote / downvote for popularity-based selection.
 
-## Deploy on Vercel
+Add animated spinning wheel for visual fun.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Mobile app version using React Native.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🌐 Deployment
+
+This app can be deployed easily on Vercel:
+
+Push your repository to GitHub.
+
+Import the project on Vercel
+.
+
+Add environment variables in the Vercel dashboard.
+
+Deploy — your live URL will be ready immediately.
+
+📄 License
+
+MIT License © 2025
