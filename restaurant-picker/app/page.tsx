@@ -57,14 +57,6 @@ export default function Home() {
         What should we eat?
       </button>
 
-      {choice && <p className="text-xl text-center font-semibold">🎉 {choice}</p>}
-
-      <h2 className="text-xl font-bold pt-4">All restaurants:</h2>
-      <ul className="list-disc pl-6">
-        {restaurants.map((r: any) => (
-          <li key={r.id}>{r.name}</li>
-        ))}
-      </ul>
     </main>
   );
 }
