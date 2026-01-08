@@ -1,11 +1,10 @@
 import { supabase } from "@/lib/supabase";
-
 export async function POST(req: Request) {
-  const { name, added_by } = await req.json();
+  const { name } = await req.json();
 
   const { data, error } = await supabase
     .from("restaurants")
-    .insert([{ name, added_by }]);
+    .insert([{ name}]);
 
   if (error) return Response.json({ error }, { status: 400 });
 

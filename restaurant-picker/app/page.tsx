@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Restaurant } from "@/lib/models/Restaurant";
 
 export default function Home() {
   const [restaurants, setRestaurants] = useState([]);
@@ -49,13 +50,22 @@ export default function Home() {
           Add
         </button>
       </div>
-
+      <ul className="list-disc list-inside">
+        {restaurants.length === 0 ? (
+          <li>No restaurants found.</li>
+        ) : (
+          restaurants.map((r: Restaurant) => (
+            <li key={r.id}>{r.name}</li>
+          ))
+        )}
+      </ul>
       <button
         onClick={pickRandom}
         className="bg-green-600 w-full text-white px-4 py-3 rounded text-lg"
       >
         What should we eat?
       </button>
+      <h2 className="text-white text-lg">Choice: {choice}</h2>
 
     </main>
   );
